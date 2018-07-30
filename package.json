@@ -1,0 +1,26 @@
+{
+  "name": "braingames-ftrip-hexlet",
+  "version": "1.0.1",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "babel-node": "babel-node",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-m",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "author": "ftrip",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "readline-sync": "^1.4.9"
+  },
+  "bin": {
+    "brain-games": "./dist/bin/brain-games.js"
+  }
+}
