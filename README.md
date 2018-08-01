@@ -1,5 +1,6 @@
 <p align="center"><img src="brain.jpg" width="50%"></p>
-<p align="center"><a href="https://codeclimate.com/github/ftrip/project-lvl1-s316/maintainability"><img src="https://api.codeclimate.com/v1/badges/e724f0a5eef6e79ff761/maintainability" /></a> <a href="https://codeclimate.com/github/ftrip/project-lvl1-s316/test_coverage"><img src="https://api.codeclimate.com/v1/badges/e724f0a5eef6e79ff761/test_coverage" /></a>
+<p align="center"><a href="https://codeclimate.com/github/ftrip/project-lvl1-s316/maintainability"><img src="https://api.codeclimate.com/v1/badges/e724f0a5eef6e79ff761/maintainability" /></a> <a href="https://codeclimate.com/github/ftrip/project-lvl1-s316/test_coverage"><img src="https://api.codeclimate.com/v1/badges/e724f0a5eef6e79ff761/test_coverage" /></a> 
+<a href="https://travis-ci.org/ftrip/project-lvl1-s316"><img src="https://travis-ci.org/ftrip/project-lvl1-s316.svg?branch=master"></a>
 </p>
 
 # Проект Brain Games
