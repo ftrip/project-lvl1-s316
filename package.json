@@ -1,6 +1,6 @@
 {
   "name": "braingames-ftrip-hexlet",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Console brain games",
   "keywords": [
     "consolegame",
@@ -36,6 +36,7 @@
   },
   "bin": {
     "brain-games": "./dist/bin/brain-games.js",
-    "brain-even": "./dist/bin/brain-even.js"
+    "brain-even": "./dist/bin/brain-even.js",
+    "brain-calc": "./dist/bin/brain-calc.js"
   }
 }
