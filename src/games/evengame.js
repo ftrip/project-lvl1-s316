@@ -1,23 +1,12 @@
-import readlineSync from 'readline-sync';
+import * as utils from '../utils';
+import base from './base';
 
-const isEven = num => num % 2 === 0;
-const randomNum = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
-
-const game = (name) => {
-  const attempts = 3;
-  for (let i = 0; i < attempts; i += 1) {
-    const question = randomNum(0, 100);
-    console.log(`Question: ${question}`);
-    const answer = readlineSync.question('Your answer: ');
-    const rightAnswer = isEven(question) ? 'yes' : 'no';
-    if (answer === rightAnswer) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
-      console.log(`Let's try again, ${name}!`);
-      return;
-    }
-  }
-  console.log(`Congratulations, ${name}`);
+const game = () => {
+  const getQuestionAndAnswer = () => {
+    const question = utils.randomNum(0, 100);
+    const rightAnswer = utils.isEven(question) ? 'yes' : 'no';
+    return [question, rightAnswer];
+  };
+  base('Answer "yes" if number even otherwise answer "no".', getQuestionAndAnswer, 3);
 };
 export default game;

@@ -1,18 +1,24 @@
-import readlineSync from 'readline-sync';
 import evengame from './games/evengame';
+import calcgame from './games/calcgame';
 
-const sayHello = () => {
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}\n`);
-  return name;
-};
+const allGames = () => { };
 
-export const gameeven = () => {
+const game = (name) => {
   console.log('Welcome to the Brain Games!');
-  console.log('Answer "yes" if number even otherwise answer "no".\n');
-
-  const name = sayHello();
-  evengame(name);
+  switch (name) {
+    case 'all':
+      allGames();
+      break;
+    case 'even':
+      evengame();
+      break;
+    case 'calc':
+      calcgame();
+      break;
+    default:
+      console.log(`Unknow game: ${name}`);
+      break;
+  }
 };
 
-export default sayHello;
+export default game;
