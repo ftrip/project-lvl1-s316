@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import game from '..';
+import { sayHello } from '../engine';
 
-game('all');
+console.log('Welcome to the Brain Games!');
+sayHello();

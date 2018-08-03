@@ -6,9 +6,10 @@ export const sayHello = () => {
   return name;
 };
 
-const baseGame = (description, getQuestionAndAnswer, attempts) => {
+const baseGame = (description, getQuestionAndAnswer) => {
   console.log(`${description}\n`);
   const name = sayHello();
+  const attempts = 3;
 
   for (let i = 0; i < attempts; i += 1) {
     const [question, rightAnswer] = getQuestionAndAnswer();

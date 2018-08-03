@@ -1,5 +1,5 @@
 import * as utils from '../utils';
-import base from './base';
+import base from '../engine';
 
 const game = () => {
   const getQuestionAndAnswer = () => {
@@ -26,6 +26,6 @@ const game = () => {
     }
     return [question, String(rightAnswer)];
   };
-  base('What is the result of the expression?', getQuestionAndAnswer, 3);
+  base('What is the result of the expression?', getQuestionAndAnswer);
 };
 export default game;

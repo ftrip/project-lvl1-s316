@@ -1,5 +1,5 @@
 import * as utils from '../utils';
-import base from './base';
+import base from '../engine';
 
 const game = () => {
   const getQuestionAndAnswer = () => {
@@ -7,6 +7,6 @@ const game = () => {
     const rightAnswer = utils.isEven(question) ? 'yes' : 'no';
     return [question, rightAnswer];
   };
-  base('Answer "yes" if number even otherwise answer "no".', getQuestionAndAnswer, 3);
+  base('Answer "yes" if number even otherwise answer "no".', getQuestionAndAnswer);
 };
 export default game;
