@@ -7,7 +7,7 @@ const game = () => {
     let rightAnswer;
     const num1 = randomNum(0, 100);
     const num2 = randomNum(0, 100);
-    const statementOfQuestion = ['+', '-', '*'](randomNum(0, 2));
+    const statementOfQuestion = ['+', '-', '*'][randomNum(0, 2)];
     switch (statementOfQuestion) {
       case '+':
         question = `${num1} + ${num2}`;
