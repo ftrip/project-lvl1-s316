@@ -18,7 +18,6 @@ const getQuestionAndAnswer = () => {
   return [question, String(rightAnswer)];
 };
 
-const game = () => {
+export default () => {
   engine('Find the greatest common divisor of given numbers.', getQuestionAndAnswer);
 };
-export default game;

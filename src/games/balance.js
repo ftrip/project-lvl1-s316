@@ -1,27 +1,24 @@
 import randomNum from '../utils';
 import engine from '../engine';
 
-const balanseNumsArray = (nums) => {
-  if (nums[nums.length - 1] - nums[0] <= 1) {
-    return nums;
+const balance = (num) => {
+  const numsQuestion = String(num).split('').map(char => Number(char)).sort();
+  while (numsQuestion[numsQuestion.length - 1] - numsQuestion[0] > 1) {
+    numsQuestion[0] += 1;
+    numsQuestion[numsQuestion.length - 1] -= 1;
+    numsQuestion.sort();
   }
-  const newNums = nums.slice();
-  newNums[0] += 1;
-  newNums[newNums.length - 1] -= 1;
-  return balanseNumsArray(newNums.sort());
+  return numsQuestion.join('');
 };
 
 const getQuestionAndAnswer = () => {
   const num = randomNum(100, 9999);
-
   const question = num;
-  const numsQuestion = String(num).split('').map(char => Number(char)).sort();
-  const rightAnswer = balanseNumsArray(numsQuestion).join('');
+  const rightAnswer = balance(num);
 
-  return [question, String(rightAnswer)];
+  return [question, rightAnswer];
 };
 
-const game = () => {
+export default () => {
   engine('Balance the given number.', getQuestionAndAnswer);
 };
-export default game;

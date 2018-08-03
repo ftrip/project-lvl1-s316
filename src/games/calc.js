@@ -21,13 +21,12 @@ const getQuestionAndAnswer = () => {
       rightAnswer = num1 * num2;
       break;
     default:
-      question = 'Unknow statement';
-      rightAnswer = 'Error';
+      question = 'Error: unknow statement';
+      rightAnswer = 0;
   }
   return [question, String(rightAnswer)];
 };
 
-const game = () => {
+export default () => {
   engine('What is the result of the expression?', getQuestionAndAnswer);
 };
-export default game;

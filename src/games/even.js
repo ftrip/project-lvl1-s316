@@ -9,7 +9,6 @@ const getQuestionAndAnswer = () => {
   return [question, rightAnswer];
 };
 
-const game = () => {
+export default () => {
   engine('Answer "yes" if number even otherwise answer "no".', getQuestionAndAnswer);
 };
-export default game;
