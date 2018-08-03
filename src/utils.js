@@ -1,2 +1,2 @@
-export const isEven = num => num % 2 === 0;
-export const randomNum = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
+const randomNum = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
+export default randomNum;

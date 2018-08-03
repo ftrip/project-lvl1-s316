@@ -13,6 +13,10 @@ const baseGame = (description, getQuestionAndAnswer) => {
 
   for (let i = 0; i < attempts; i += 1) {
     const [question, rightAnswer] = getQuestionAndAnswer();
+    if (rightAnswer === 'Error') {
+      console.log(`Error in game: ${question}`);
+      return;
+    }
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
     if (answer === rightAnswer) {

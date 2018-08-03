@@ -1,4 +1,4 @@
-import * as utils from '../utils';
+import randomNum from '../utils';
 import engine from '../engine';
 
 const nod = (x, y) => {
@@ -10,8 +10,8 @@ const nod = (x, y) => {
 
 const game = () => {
   const getQuestionAndAnswer = () => {
-    const num1 = utils.randomNum(1, 30);
-    const num2 = utils.randomNum(1, 100);
+    const num1 = randomNum(1, 30);
+    const num2 = randomNum(1, 100);
 
     const question = `${num1} ${num2}`;
     const rightAnswer = nod(num1, num2);

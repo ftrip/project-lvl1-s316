@@ -1,10 +1,12 @@
-import * as utils from '../utils';
+import randomNum from '../utils';
 import engine from '../engine';
+
+export const isEven = num => num % 2 === 0;
 
 const game = () => {
   const getQuestionAndAnswer = () => {
-    const question = utils.randomNum(0, 100);
-    const rightAnswer = utils.isEven(question) ? 'yes' : 'no';
+    const question = randomNum(0, 100);
+    const rightAnswer = isEven(question) ? 'yes' : 'no';
     return [question, rightAnswer];
   };
   engine('Answer "yes" if number even otherwise answer "no".', getQuestionAndAnswer);
