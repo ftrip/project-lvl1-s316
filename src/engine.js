@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 
 const attempts = 3;
 
-export const sayHello = () => {
+const sayHello = () => {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}\n`);
   return name;
