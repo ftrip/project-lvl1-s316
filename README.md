@@ -25,11 +25,11 @@
 > Correct!  
 > Congratulations, John!
 
-##Install
+## Install
 
 sudo npm install -g braingames-ftrip-hexlet
 
-##Games
+## Games
 
 (для начала игры набрать ее название в командной строке)
 1. brain-prime : Простое ли число?
